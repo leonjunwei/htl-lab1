@@ -51,7 +51,7 @@ You shouldn't need to run this – in fact, running it too often may look like a
 As with all web scraping, this script is fragile – a minor change to the olin.edu web design or URL format
 could break it with no warning.
 
-'static/' is the directory containing pictures (used for favicon in this case) as well as stylesheets.
+'static/' is the directory containing pictures (used for favicon in this case) as well as imported stylesheets (Bootstrap being the only one at the moment).
 
 
 ## Contributors
