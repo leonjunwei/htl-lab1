@@ -15,13 +15,27 @@ app = Flask(__name__)
 
 courses = pd.read_csv('./data/olin-courses-16-17.csv')
 
+
+def flip(name): #turns A, B into B, A. It also needs to turn A, B ; C, D into B A; D C
+    return " ".join(name.split(", ")[::-1])
+
+def parse(names):
+    if ";" in names:
+        return "; ".join([flip(name) for name in names.split("; ")])
+    else:
+        return flip(names)
+
+# print(flip('Dabby, Diana'))
+# print parse("Lynch, Caitrin; Ben-Ur, Ela")
+
+
 @app.route('/health')
 def health():
     return 'ok'
 
 @app.route('/')
 def home_page():
-    return render_template('index.html', areas=set(courses.course_area), contacts=set(courses.course_contact.dropna()))
+    return render_template('index.html', areas=set(courses.course_area), contacts=set(parse(name) for name in set(courses.course_contact.dropna())))
 
 @app.route('/area/<course_area>')
 def area_page(course_area):
