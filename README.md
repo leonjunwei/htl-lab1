@@ -10,6 +10,11 @@ Python 3 is required to run this program.
 You can test whether Python 3 is installed on your laptop by running `python3` in the bash (shell) command line.
 
 
+## Edits made
+
+Edits include swapping staff names from 'Last, First' to 'First Last' format, linking each course's description to the course website, implementing rudimentary stylesheet usage (basically by importing Bootstrap and putting everything in containers) and adding a favicon so the page looks more legit.
+
+
 ## Setup
 
 ```
@@ -46,10 +51,13 @@ You shouldn't need to run this – in fact, running it too often may look like a
 As with all web scraping, this script is fragile – a minor change to the olin.edu web design or URL format
 could break it with no warning.
 
+'static/' is the directory containing pictures (used for favicon in this case) as well as imported stylesheets (Bootstrap being the only one at the moment).
+
 
 ## Contributors
 
 Written by Oliver Steele <oliver.steele@olin.edu>.
+Edited and submitted by Leon Lam <LeonJunWei.Lam@students.olin.edu>.
 
 
 ## License
