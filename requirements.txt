@@ -1,3 +1,4 @@
+os
 flask
 pandas
-
+psycopg2
