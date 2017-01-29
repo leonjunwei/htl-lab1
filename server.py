@@ -5,9 +5,6 @@ author: Oliver Steele <oliver.steele@olin.edu>
 date  : 2017-01-18
 license: MIT
 """
-
-import os
-
 import pandas as pd
 from flask import Flask, redirect, render_template, request, url_for
 
