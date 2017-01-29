@@ -5,7 +5,7 @@ author: Oliver Steele <oliver.steele@olin.edu>
 date  : 2017-01-18
 license: MIT
 """
-# import os
+import os
 import pandas as pd
 from flask import Flask, redirect, render_template, request, url_for
 
@@ -40,4 +40,5 @@ def area_page(course_area):
     return render_template('course_area.html', courses=courses[courses.course_area == course_area].iterrows())
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True, port=33507)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', debug=True, port=port)
